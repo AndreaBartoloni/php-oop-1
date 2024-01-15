@@ -1,22 +1,24 @@
 <?php
 
 class Movies
+// ATTRIBUTI
 {
     public $name;
     public $genre;
     public $duration;
 
-
-    public function __construct($genere, $durata)
+    //METODO
+    public function __construct($nome, $genere, $durata) // creiamo dei parametri e li assoceremo alle variabili corrette
     {
+        $this->name = $nome;
         $this->genre = $genere;
         $this->duration = $durata;
 
     }
-
-    public function getMovies()
+    //METODO
+    public function getMovies() // funzione dove stampare genere e durata del film
     {
-        $results = $this->genre . ", " . $this->duration;
+        $results = $this->name. "," . $this->genre . ", " . $this->duration;
         return $results;
     }
 
